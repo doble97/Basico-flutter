@@ -13,12 +13,22 @@ class InmutableWidget extends StatelessWidget {
           color: Colors.purpleAccent,
           child: Padding(
             padding: const EdgeInsets.all(50.0),
-            child: Container(
-              color: Colors.blue,
-            ),
+            child: _buildShinyCircle(),
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildShinyCircle() {
+    return Container(
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          gradient: RadialGradient(
+            colors: [Colors.lightBlueAccent, Colors.blueAccent],
+            center: Alignment(-0.3, -0.5),
+          ),
+          boxShadow: [BoxShadow(blurRadius: 20)]),
     );
   }
 }

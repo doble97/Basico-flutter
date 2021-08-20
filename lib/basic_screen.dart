@@ -23,6 +23,7 @@ class BasicSreen extends StatelessWidget {
             child: InmutableWidget(),
           ),
         ),
+        //Drawer crea un icono menu y al hacer click se muestra una pantalla por encima
         drawer: Drawer(
           child: Container(
             color: Colors.lightBlue,
